@@ -51,6 +51,11 @@ body {
   color: #fff;
   padding-bottom: 5rem;
 }
+
+.value {
+	background-color: teal;
+	border-radius: 10%;
+}
 .value-multiplier {
   margin-bottom: .5rem;
   color: #11DFC7;
@@ -82,6 +87,11 @@ body {
 }
 .categories .section-description { 
   margin-bottom: 4rem;
+}
+
+category {
+	background-color: teal;
+	border-radius: 10%;
 }
 
 /* Bigger than 550 */
