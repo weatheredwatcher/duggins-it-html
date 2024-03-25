@@ -33,6 +33,32 @@
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="../../dist/images/favicon.png">
+  
+  <style>
+  .splide__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+  .splide__slide {
+  opacity: 0.6;
+}
+
+.splide__slide.is-active {
+  opacity: 1;
+}
+  </style>
+<!-- Magnific Popup core CSS file -->
+<link rel="stylesheet" href="/assets/css/magnific-popup.css">
+<!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<!-- Magnific Popup core JS file -->
+<script src="/assets/js/jquery.magnific-popup.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" integrity="sha256-FZsW7H2V5X9TGinSjjwYJ419Xka27I8XPDmWryGlWtw=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" integrity="sha256-5uKiXEwbaQh9cgd2/5Vp6WmMnsUr3VZZw0a8rKnOKNU=" crossorigin="anonymous">
+
 
 </head>
 <body>
@@ -72,7 +98,7 @@
  <div class="section get-help nav-end ">
     <div class="container">
       <h3 class="section-heading">Need help getting started?</h3>
-      <p class="section-description">Skeleton is an amazingly easy place to start with responsive development. If you want to learn more, just visit the documentation!</p>
+       <p class="section-description">Whether you are just starting out in the world of the web, or you are in need of a custom set of tools, we can help you achieve what you want! </p>
       <a class="button button-primary" href="http://getskeleton.com">View Skeleton Docs</a>
     </div>
   </div>
@@ -101,8 +127,8 @@
   
   <div class="section get-help">
     <div class="container">
-      <h3 class="section-heading">Need help getting started?</h3>
-      <p class="section-description">Skeleton is an amazingly easy place to start with responsive development. If you want to learn more, just visit the documentation!</p>
+      <h3 class="section-heading">No matter you needs, we can help</h3>
+      <p class="section-description">We have you covered from JAMStack and Basic Static websites, to more advanced options such as WordPress or a custom application experience.</p>
       <a class="button button-primary" href="http://getskeleton.com">View Skeleton Docs</a>
     </div>
   </div>
@@ -132,8 +158,8 @@
   </div>
  <div class="section get-help">
     <div class="container">
-      <h3 class="section-heading">Need help getting started?</h3>
-      <p class="section-description">Skeleton is an amazingly easy place to start with responsive development. If you want to learn more, just visit the documentation!</p>
+      <h3 class="section-heading">Bespoke Web Applications</h3>
+      <p class="section-description">We can help you create the site of your dreams using Modern Frameworks in PHP and Ruby on Rails. </p>
       <a class="button button-primary" href="http://getskeleton.com">View Skeleton Docs</a>
     </div>
   </div>
@@ -143,5 +169,36 @@
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+  <script>
+document.addEventListener( 'DOMContentLoaded', function () {
+
+  var thumbnails = new Splide( '#site-gallery', {
+    fixedWidth  : 100,
+    fixedHeight : 60,
+    gap         : 10,
+    rewind      : true,
+    pagination  : false,
+    isNavigation: true,
+    breakpoints : {
+      600: {
+        fixedWidth : 60,
+        fixedHeight: 44,
+      },
+    },
+  } );
+
+
+  main.sync( thumbnails );
+  main.mount();
+  thumbnails.mount();
+} );
+
+$(document).ready(function() {
+  $('.popup-image').magnificPopup({type:'image'});
+});
+
+</script>
+
 </body>
 </html>
